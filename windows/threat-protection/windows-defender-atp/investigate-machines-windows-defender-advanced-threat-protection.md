@@ -65,16 +65,16 @@ This feature also enables you to selectively drill down into events that occurre
 
 ![Image of machine timeline with events](images/atp-machine-timeline.png)
 
-Windows Defender ATP monitors and captures questionable behavior on Windows 10 machines and displays the process tree flow in the **Machine timeline**. This gives you better context of the behavior which can contribute to understanding the correlation between events, files, and IP addresses in relation to the machine.
+Windows Defender ATP monitors and captures all behaviors and events on Windows 10 machines and displays these and their process trees in the **Machine timeline**. This gives you richer context of the behavior or event that can contribute to understanding the correlation between events, files, IP addresses, etc. during an investigation.
 
-### Search for specific alerts
-Use the search bar to look for specific alerts or files associated with the machine:
+### Search for specific events
+Use the search bar to look for specific events or files observed on the machine:
 
--	**Value** – Type in any search keyword to filter the timeline with the attribute you’re searching for.
+-	**Value** – Type in any search type:value pair to return events matching your search conditions.
 -	**Informational level** – Click the drop-down button to filter by the following levels:
   - **Detections mode**: displays Windows ATP Alerts and detections
   -	**Behaviors mode**: displays "detections" and selected events of interest
-  -	**Verbose mode**: displays "behaviors" (including "detections"), and all reported events
+  -	**Verbose mode**: displays "behaviors" (including "detections"), and all raw events
 -	**User** – Click the drop-down button to filter the machine timeline by the following user associated events:
   -	Logon users
   -	System
@@ -83,11 +83,11 @@ Use the search bar to look for specific alerts or files associated with the mach
 
 
 ### Filter events from a specific date
-Use the time-based slider to filter events from a specific date. By default, the machine timeline is set to display the events of the current day.
+Use the time-based slider to filter events from a specific date. By default, the machine timeline displays the events of the current day.
 
-Using the slider updates the listed alerts to the date that you select. Displayed events are filtered from that date and older.
+Using the slider updates the listed events to the selected date and displays events from that date and earlier.
 
-The slider is helpful when you're investigating a particular alert on a machine. You can navigate from the **Alerts view** and click on the machine associated with the alert to jump to the specific date when the alert was observed, enabling you to investigate the events that took place around the alert.
+The slider is helpful when you're investigating a particular alert on a machine. You can navigate from the **Alerts view** and click on the machine associated with the alert to navigate to the specific date the alert was observed, enabling you to investigate the events that took place around the time of the alert.
 
 ### Export machine timeline events
 You can also export detailed event data from the machine timeline to conduct offline analysis. You can choose to export the machine timeline for the current date or specify a date range. You can export up to seven days of data and specify the specific time between the two dates.
@@ -106,7 +106,7 @@ From the list of events that are displayed in the timeline, you can examine the 
 
 You can also use the [Alerts spotlight](investigate-alerts-windows-defender-advanced-threat-protection.md#alert-timeline) feature to see the correlation between alerts and events on a specific machine.
 
-Expand an event to view associated processes related to the event. Click on the circle next to any process or IP address in the process tree to investigating further into the identified processes. This action brings up the **Details pane** which includes execution context of processes, network communications and a summary of metadata on the file or IP address.
+Expand an event to view its ancestor processes. Click on the circle next to any process, file, or IP address in the process tree to learn more about the selected entity. This action brings up the **Details pane** which includes execution context of processes, network communications, etc. and a summary of metadata on the file or IP address.
 
 This enhances the ‘in-context’ information across investigation and exploration activities, reducing the need to switch between contexts. It lets you focus on the task of tracing associations between attributes without leaving the current context.
 
